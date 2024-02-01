@@ -16,8 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->decimal('cost', 10, 2)->nullable();
-            $table->string('phone_number')->nullable(); 
-            $table->unsignedBigInteger('category_id');
+             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('category')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
