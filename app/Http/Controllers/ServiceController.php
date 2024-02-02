@@ -14,6 +14,10 @@ class ServiceController extends Controller
         $services = Service::all();
         return view('services.index',['services'=>$services]);
     }
+    public function welcome(){
+        $services = Service::all();
+        return view('welcome',['services'=>$services]);
+    }
 
     public function create(){
         $categories = Category::all();

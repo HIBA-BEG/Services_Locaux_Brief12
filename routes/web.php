@@ -32,5 +32,7 @@ Route::get('/category', [CategoryController::class, 'index'])->name('category.in
 Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
 
 Route::get('/service', [ServiceController::class, 'index'])->name('service.index');
+Route::get('/', [ServiceController::class, 'welcome'])->name('welcome');
 Route::get('/service/create', [ServiceController::class, 'create'])->name('service.create');
+
 Route::post('/service', [ServiceController::class, 'store'])->name('service.store');
